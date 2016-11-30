@@ -4,12 +4,24 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
   public float speed;
+  public GameObject shot;
+  public Transform shotSpawn;
+  public float fireRate;
 
+  private float nextFire;
   private Rigidbody rigidbody;
 
   // Use this for initialization
   void Start () {
+    nextFire = 0.0f;
     rigidbody = GetComponent<Rigidbody> ();
+  }
+
+  void Update () {
+    if (Input.GetButton ("Fire1") && Time.time > nextFire) {
+      nextFire = Time.time + fireRate;
+      Instantiate (shot, shotSpawn.position, shotSpawn.rotation);
+    }
   }
 
   void FixedUpdate () {
