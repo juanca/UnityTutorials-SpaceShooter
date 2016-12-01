@@ -21,7 +21,6 @@ GameObject:
   - 4: {fileID: 4000011274213060}
   - 33: {fileID: 33000013166896510}
   - 23: {fileID: 23000012523451974}
-  - 136: {fileID: 136000012180656420}
   m_Layer: 0
   m_Name: VFX
   m_TagString: Untagged
@@ -39,6 +38,7 @@ GameObject:
   - 4: {fileID: 4000012550502122}
   - 114: {fileID: 114000011333274226}
   - 54: {fileID: 54000010870841050}
+  - 136: {fileID: 136000010069006792}
   m_Layer: 0
   m_Name: Bolt
   m_TagString: Untagged
@@ -135,12 +135,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe06e0e2d901f4b20a9c14e91935dbd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &136000012180656420
+--- !u!136 &136000010069006792
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010587173790}
+  m_GameObject: {fileID: 1000011928648372}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
