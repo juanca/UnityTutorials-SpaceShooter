@@ -135,6 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de594b80a5af34600b5513dc5ca7457f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  asteroidExplosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
+  playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
 --- !u!136 &136000011961315164
 CapsuleCollider:
   m_ObjectHideFlags: 1
