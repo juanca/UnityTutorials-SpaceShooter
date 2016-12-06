@@ -1,11 +1,26 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameController : MonoBehaviour {
+  public Text scoreText;
   public GameObject hazard;
 
+  private int score;
+
   void Start () {
+    score = 0;
+    UpdateScore ();
     StartCoroutine (SpawnWaves ());
+  }
+
+  public void IncrementScore (int value) {
+    score += value;
+    UpdateScore ();
+  }
+
+  void UpdateScore () {
+    scoreText.text = "Score: " + score;
   }
 
   IEnumerator SpawnWaves () {
