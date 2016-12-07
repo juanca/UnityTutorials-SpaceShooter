@@ -22,6 +22,7 @@ public class AsteroidController : MonoBehaviour {
 
     if (other.CompareTag ("Player")) {
       Instantiate (playerExplosion, other.transform.position, other.transform.rotation);
+      gameController.GameOver ();
     }
 
     Instantiate (asteroidExplosion, transform.position, transform.rotation);

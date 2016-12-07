@@ -1,17 +1,46 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
-  public Text scoreText;
+  public Text gameOverUI;
+  public Text restartUI;
+  public Text scoreUI;
   public GameObject hazard;
 
   private int score;
+  private bool gameOver;
 
-  void Start () {
+
+  //
+  // Lifecycle
+
+  private void Start () {
+    gameOverUI.text = "";
+    restartUI.text = "";
     score = 0;
+    scoreUI.text = "";
+
     UpdateScore ();
     StartCoroutine (SpawnWaves ());
+  }
+
+  private void Update () {
+    if (gameOver) {
+      if (Input.GetKeyDown (KeyCode.R)) {
+        SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+      }
+    }
+  }
+
+
+  //
+  // Controls
+
+  public void GameOver () {
+    gameOver = true;
+    gameOverUI.text = "Game Over";
   }
 
   public void IncrementScore (int value) {
@@ -19,11 +48,7 @@ public class GameController : MonoBehaviour {
     UpdateScore ();
   }
 
-  void UpdateScore () {
-    scoreText.text = "Score: " + score;
-  }
-
-  IEnumerator SpawnWaves () {
+  private IEnumerator SpawnWaves () {
     yield return new WaitForSeconds (3.0f);
 
     while (true) {
@@ -36,6 +61,14 @@ public class GameController : MonoBehaviour {
       }
 
       yield return new WaitForSeconds (2.0f);
+
+      if (gameOver) {
+        restartUI.text = "Restart ('R')";
+      }
     }
+  }
+
+  private void UpdateScore () {
+    scoreUI.text = "Score: " + score;
   }
 }
