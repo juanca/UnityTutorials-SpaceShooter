@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour {
   public Text gameOverUI;
   public Text restartUI;
   public Text scoreUI;
-  public GameObject hazard;
+  public GameObject[] hazards;
 
   private int score;
   private bool gameOver;
@@ -53,6 +53,7 @@ public class GameController : MonoBehaviour {
 
     while (true) {
       for (int i = 0; i < 10; i += 1) {
+        GameObject hazard = hazards [Random.Range (0, hazards.Length)];
         Vector3 hazardPosition = new Vector3 (Random.Range (-6.0f, 6.0f), 0.0f, 18.5f);
         Quaternion hazardRotation = Quaternion.identity;
         Instantiate (hazard, hazardPosition, hazardRotation);

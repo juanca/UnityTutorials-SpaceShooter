@@ -121,7 +121,10 @@ MonoBehaviour:
   gameOverUI: {fileID: 314375732}
   restartUI: {fileID: 351166461}
   scoreUI: {fileID: 1865498581}
-  hazard: {fileID: 1000011587872370, guid: 564dd8afa22d54aa3af0f9c22186c4a7, type: 2}
+  hazards:
+  - {fileID: 1000011906356182, guid: 89e9d4ec414e44ee8b4cd88cd9f43e13, type: 2}
+  - {fileID: 1000013562755434, guid: 99f96b126e9904f868afddec5d8d156c, type: 2}
+  - {fileID: 1000013072695182, guid: c65c7d04afe5d48c88753739833492ee, type: 2}
 --- !u!4 &7194527
 Transform:
   m_ObjectHideFlags: 0
