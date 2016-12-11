@@ -39,6 +39,7 @@ GameObject:
   - 136: {fileID: 136000013889071972}
   - 114: {fileID: 114000014240794100}
   - 54: {fileID: 54000011010426496}
+  - 114: {fileID: 114000011789460504}
   m_Layer: 0
   m_Name: Asteriod01
   m_TagString: Untagged
@@ -124,6 +125,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114000011789460504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011906356182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02497792f6c06413c877b19436bfbc3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfExplosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
+  playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
 --- !u!114 &114000014240794100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,8 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de594b80a5af34600b5513dc5ca7457f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidExplosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
 --- !u!136 &136000013889071972
 CapsuleCollider:
   m_ObjectHideFlags: 1
